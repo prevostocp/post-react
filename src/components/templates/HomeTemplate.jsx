@@ -1,9 +1,9 @@
 import styled from "styled-components";
 export function HomeTemplate() {
   return (<Container>
-<h1>Home Template</h1>
+<p>Home Template</p>
   </Container>);
 }
 const Container =styled.div`
-  
+  height: 100vh;
 `
