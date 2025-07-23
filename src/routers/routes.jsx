@@ -1,11 +1,16 @@
 import { Routes, Route } from "react-router-dom"
-import { Home, Login } from "../index"
+import { Home, Login, PaidToClick, UserAuth, ProtectedRoute } from "../index"
 
 export function MyRoutes() {
-    return(        
+    const { user } = UserAuth();
+    return (
         <Routes>
-            <Route path="/" element={<Home />} />
+            <Route element={<ProtectedRoute user={user} redirectTo="/login" />}  >
+                <Route path="/" element={<Home />} />
+                <Route path="/ptc" element={<PaidToClick />} />
+            </Route>
+
             <Route path="/login" element={<Login />} />
-        </Routes>        
+        </Routes>
     )
 }
