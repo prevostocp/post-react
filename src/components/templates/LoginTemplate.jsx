@@ -6,9 +6,9 @@ import { Device } from "../../styles/breakpoints"
 export function LoginTemplate() {
   const { loginGoogle } = useAuthStore();
   const { insertarempresa } = useEmpresatore();
-  const insertar = async () =>{
+  const insertar = async () => {
     const p = {
-      nombre: "Pruebas"
+      nombre: "Prueba 2"
     }
     await insertarempresa(p);
   }
@@ -25,15 +25,12 @@ export function LoginTemplate() {
           <input className="form__field" placeholder="contraseña" type="password" />
         </InputText2>
         <Btnsave titulo="INGRESAR" bgcolor="#1CB0F6" color="255, 255, 255" width="100%" />
-
-        <Btnsave titulo="insertar empresa" />
-
-
       </form>
       <Linea>
         <span>0</span>
       </Linea>
       <Btnsave funcion={loginGoogle} titulo="Google" bgcolor="#fff" icono={<v.iconogoogle />} />
+      <Btnsave titulo="insertar empresa" funcion={insertar} />
     </div>
     <Footer />
   </Container>);
