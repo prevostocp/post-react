@@ -1,17 +1,10 @@
 import styled from "styled-components";
-import { InputText2, Title, Btnsave, Linea, Footer, useAuthStore, useEmpresatore } from "../../index"
+import { InputText2, Title, Btnsave, Linea, Footer, useAuthStore } from "../../index"
 import { v } from "../../styles/variables"
 import { Device } from "../../styles/breakpoints"
 
 export function LoginTemplate() {
   const { loginGoogle } = useAuthStore();
-  const { insertarempresa } = useEmpresatore();
-  const insertar = async () => {
-    const p = {
-      nombre: "Prueba 2"
-    }
-    await insertarempresa(p);
-  }
   return (<Container>
     <div className="card" >
       <ContentLogo>
@@ -30,7 +23,7 @@ export function LoginTemplate() {
         <span>0</span>
       </Linea>
       <Btnsave funcion={loginGoogle} titulo="Google" bgcolor="#fff" icono={<v.iconogoogle />} />
-      <Btnsave titulo="insertar empresa" funcion={insertar} />
+      
     </div>
     <Footer />
   </Container>);
