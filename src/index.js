@@ -12,7 +12,6 @@ export * from './components/templates/LoginTemplate';
 export * from './components/templates/PaidToClickTemplate';
 export * from './context/AuthContext';
 export * from './hooks/ProtectedRoute';
-export * from './index';
 export * from './main';
 export * from './pages/Home';
 export * from './pages/Login';

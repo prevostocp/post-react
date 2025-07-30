@@ -40,6 +40,7 @@ export const AuthContextProvider = ({ children }) => {
                     fecharegistro: new Date,
                     id_auth: id_auth
                 }
+                console.log("pUser", pUser)
                 await InsertarAdmin(pUser);
             }
         }
