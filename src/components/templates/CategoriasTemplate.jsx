@@ -35,6 +35,9 @@ const Container = styled.div`
   .area2 {
     grid-area: area2;
     background-color: rgba(7,237,45,0.14);
+    display: flex;
+    justify-content: end;
+    align-items: center;
   }
   .main {
     grid-area: main;

@@ -53,3 +53,8 @@ export async function MostrarCategorias(p) {
     const { data } = await supabase.from(tabla).select().eq("id_empresa", p.id).order("id", { ascending: false });
     return data;
 }
+
+export async function BuscarCategorias(p) {
+    const { data } = supabase.from(tabla).select().eq("id_empresa", p.id_empresa).ilike("nombre", "%" + p.descripcion + "%");
+    return data;
+}
