@@ -8,7 +8,7 @@ export function MyRoutes() {
             <Route element={<ProtectedRoute user={user} redirectTo="/login" />}  >
                 <Route path="/" element={<Home />} />
                 <Route path="/configuracion" element={<Configuraciones />} />
-                 <Route path="/configuracion/categorias" element={<Categorias />} />
+                <Route path="/configuraciones/categorias" element={<Categorias />} />
                 <Route path="/ptc" element={<PaidToClick />} />
             </Route>
 
