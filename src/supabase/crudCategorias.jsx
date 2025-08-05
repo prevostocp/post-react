@@ -58,3 +58,23 @@ export async function BuscarCategorias(p) {
     const { data } = supabase.from(tabla).select().eq("id_empresa", p.id_empresa).ilike("nombre", "%" + p.descripcion + "%");
     return data;
 }
+
+export async function EliminarCategoria(p) {
+    const { data, error } = supabase.from(tabla).delete().eq("id", p.id);
+    if (error) {
+        Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: error.message
+        });
+        return;
+    }
+    if(p.icono != '-') {
+        const ruta = "categorias/" + p.id;
+        await supabase.storage.from("imagenes").remove([ruta]);
+    }
+}
+
+export async function EditarCategorias(p, fileold, filenew) {
+    const { error } = await supabase.rpc();
+}
