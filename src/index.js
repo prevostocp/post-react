@@ -24,6 +24,7 @@ export * from './pages/Login';
 export * from './pages/PaidToClick';
 export * from './routers/routes';
 export * from './store/AuthStore';
+export * from './store/CategoriasStore';
 export * from './store/EmpresaStore';
 export * from './store/ModulosStore';
 export * from './store/ThemeStore';
