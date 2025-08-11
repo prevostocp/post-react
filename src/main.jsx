@@ -13,8 +13,8 @@ const queryClient = new QueryClient()
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
-      <QueryClientProvider client={queryClient}>        
+    <BrowserRouter basename="/post-react">
+      <QueryClientProvider client={queryClient}>
         <App />
       </QueryClientProvider>
     </BrowserRouter>
